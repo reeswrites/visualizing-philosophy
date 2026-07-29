@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>A cladogram of positions on the self, truth and consciousness</title>
+    <meta
+      name="description"
+      content="Fifteen philosophical positions grouped by character state rather than historical descent, with a character matrix covering self, consciousness and truth."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="masthead">
+      <div class="wrap">
+        <nav class="sitenav" aria-label="Views">
+          <a href="./">Timeline</a>
+          <a href="./cladogram.html" aria-current="page">Cladogram</a>
+        </nav>
+        <p class="eyebrow">Character states · not descent</p>
+        <h1>Where the <em>colours</em> scatter</h1>
+        <p class="standfirst">
+          A cladogram assumes descent with modification: shared characters mean common ancestry. Philosophy violates
+          that constantly. So branch on real diagnostic characters, colour the tips by actual lineage, and read the
+          mismatch — that is what a cladogram is for.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="wrap">
+          <h2>The tree</h2>
+          <div class="tree-layout">
+            <div class="plot-shell">
+              <div class="plot-scroll" id="tree"></div>
+              <div class="tip" id="tip" role="tooltip"></div>
+            </div>
+            <div>
+              <h2>The characters</h2>
+              <ul class="characters" id="characters"></ul>
+            </div>
+          </div>
+          <p class="hint">Hover or tab to a tip · click to jump to its entry</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>The positions</h2>
+          <div id="positions"></div>
+          <noscript>
+            <p>
+              This page renders its tree and tables with JavaScript. The underlying data, including every citation,
+              lives in <code>src/data/tree.ts</code> and <code>src/data/matrix.ts</code> in the repository.
+            </p>
+          </noscript>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>What the tree shows</h2>
+          <p>
+            Characters 6 and 7 split the lower half of the tree, and both clades are thoroughly mixed. Yogacara and
+            Husserl are not related; they arrive at pre-reflective self-awareness independently, thirteen centuries
+            apart. Nyaya and David Rosenthal both hold that a mental state is unconscious until a second state targets
+            it, and Nyaya got there in Sanskrit around 200 CE. Madhyamaka’s objection to self-awareness — a blade cannot
+            cut itself — is structurally the objection Ryle would make against the inner eye.
+          </p>
+          <p>
+            That scatter is the finding. Position in this tree predicts almost nothing about ancestry. In biology this
+            pattern is called homoplasy, and it is normally a nuisance to be explained away. Here it is the result: the
+            space of defensible positions about consciousness is small enough that traditions with no contact keep
+            landing in the same places.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>The character matrix</h2>
+          <p>
+            Truth looks like a separate topic but on one major axis it is not. The Indian debate over
+            <em>pramanya</em> asks whether a cognition certifies its own truth (<em>svatah</em>, held by Mimamsa and
+            Advaita) or whether validity must be established by something external (<em>paratah</em>, held by Nyaya).
+            That is character 6 against character 7, applied to a different question — and the same schools land on the
+            same sides.
+          </p>
+          <div class="matrix-scroll">
+            <table class="matrix" id="matrix"></table>
+          </div>
+          <p class="matrix-key" id="matrix-key"></p>
+          <h2 style="margin-top: 2.5rem">What each column asks</h2>
+          <ul class="characters" id="questions"></ul>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <h2>Limits worth taking seriously</h2>
+          <p>
+            <strong>The character set is a choice, not a discovery.</strong> Biology has a ground truth the tree is
+            trying to recover; here the tree is only as good as the questions you branch on. Pick different characters —
+            intentionality, the mind-body relation, whether error about one’s own states is possible — and you get a
+            different topology with different clades. A cladogram of ideas cannot be wrong in the way a phylogeny can.
+          </p>
+          <p>
+            <strong>The tips are not comparable units.</strong> Nyaya is a thousand-year tradition with fierce internal
+            disagreement, compressed here into one dot beside Descartes, one man. The contested cells hide real fights:
+            Prabhakara and Bhatta Mimamsa split over exactly the self-luminosity question, and Husserl and Sartre
+            disagree about whether there is an ego in consciousness at all.
+          </p>
+          <p>
+            <strong>Trees cannot show reticulation.</strong> Schopenhauer read the Upanishads; Husserl was read by
+            Buddhist studies scholars who then reinterpreted Yogacara through him; Kriegel and Zahavi cite Dharmakirti
+            directly. Some of what looks like convergence in the lower half of the tree may be borrowing running
+            backward through the diagram. A phylogenetic network — a tree with horizontal edges drawn in — would be the
+            honest form.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <p>
+          Tip notes are compressions of long-running arguments and should be read as pointers, not summaries. Every tip
+          carries a link to a fuller account.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/views/cladogram.ts"></script>
+  </body>
+</html>

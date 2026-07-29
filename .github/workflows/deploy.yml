@@ -1,0 +1,86 @@
+name: Build, test and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# One deploy at a time. Queued runs wait rather than cancel, so a push
+# never leaves the site half-published.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: "*/package-lock.json"
+
+      # Each visualization is an independent project in its own directory.
+      # The statically buildable ones are built one by one and collected
+      # under dist/, so each ships at /<repo>/<visualization>/. A project
+      # with no build script is a server app that Pages cannot host, so it
+      # is skipped rather than failing the run.
+      - name: Build every static visualization
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          has() { node -e "process.exit(require('./$1/package.json').scripts?.$2?0:1)"; }
+          for project in */; do
+            name="${project%/}"
+            [ -f "$name/package.json" ] || continue
+            if ! has "$name" build; then
+              echo "Skipping $name — no build script, so nothing to publish."
+              continue
+            fi
+            echo "::group::$name"
+            npm ci --prefix "$name"
+            # Tests gate the deploy where a project has them: a bad data
+            # edit should never ship.
+            if has "$name" test; then
+              npm test --prefix "$name"
+            fi
+            npm run build --prefix "$name"
+            cp -R "$name/dist" "dist/$name"
+            echo "::endgroup::"
+          done
+
+      - name: Add the landing page
+        run: |
+          cp index.html dist/index.html
+          # Pages would otherwise run the output through Jekyll, which drops
+          # any directory or file whose name starts with an underscore.
+          touch dist/.nojekyll
+
+      - uses: actions/configure-pages@v5
+        if: github.ref == 'refs/heads/main'
+
+      - uses: actions/upload-pages-artifact@v3
+        if: github.ref == 'refs/heads/main'
+        with:
+          path: dist
+
+  deploy:
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

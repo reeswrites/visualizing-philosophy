@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Argument Mapper</title>
+  <script type="importmap">
+  {
+    "imports": {
+      "d3": "https://cdn.jsdelivr.net/npm/d3@7/+esm"
+    }
+  }
+  </script>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+  <div id="home-screen">
+    <div class="home-content">
+      <header class="home-header">
+        <h1 class="home-title">Argument Mapper</h1>
+        <p class="home-subtitle">Build, examine, and navigate any argument.</p>
+      </header>
+      <div class="home-actions">
+        <button id="home-new-btn" class="home-action-btn home-action-primary">New argument</button>
+        <label class="home-action-btn home-action-secondary" id="home-upload-label">
+          <input type="file" id="home-upload-input" accept=".txt,.md" />
+          <span>Analyze document</span>
+        </label>
+      </div>
+      <section id="home-sessions-section" class="home-sessions" hidden>
+        <p class="home-sessions-title">Recent arguments</p>
+        <div id="home-session-list"></div>
+      </section>
+    </div>
+  </div>
+  <div id="app" hidden>
+    <div id="dialogue-panel">
+      <div id="dialogue-header">
+        <span class="app-title">Argument Mapper</span>
+        <button id="new-argument-btn" title="Return to arguments list">← Arguments</button>
+        <label class="ai-toggle-wrap" title="Enable AI-powered Socratic guide (coming soon)">
+          <input type="checkbox" id="ai-mode-toggle">
+          <span class="toggle-track"><span class="toggle-thumb"></span></span>
+          <span class="toggle-label">AI Guide</span>
+        </label>
+      </div>
+      <div id="dialogue-messages"></div>
+      <div id="dialogue-input-area">
+        <textarea id="dialogue-input" placeholder="Type your response…" rows="3"></textarea>
+        <button id="dialogue-submit">Continue →</button>
+      </div>
+    </div>
+    <div id="graph-panel">
+      <svg id="arg-graph"></svg>
+
+      <div id="node-edit-overlay" class="graph-overlay" hidden>
+        <div class="overlay-card">
+          <p class="overlay-title">Edit claim</p>
+          <textarea id="node-edit-input" rows="3"></textarea>
+          <div class="overlay-actions">
+            <button id="node-edit-cancel" class="btn-secondary">Cancel</button>
+            <button id="node-edit-save" class="btn-primary">Save</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="node-delete-overlay" class="graph-overlay" hidden>
+        <div class="overlay-card">
+          <p class="overlay-title">Delete this claim?</p>
+          <p id="node-delete-desc" class="overlay-desc"></p>
+          <div class="overlay-actions">
+            <button id="node-delete-cancel" class="btn-secondary">Cancel</button>
+            <button id="node-delete-confirm" class="btn-danger">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="/js/main.js"></script>
+</body>
+</html>

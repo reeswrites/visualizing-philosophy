@@ -1,0 +1,33 @@
+{
+  "name": "arg-mapper",
+  "version": "1.0.0",
+  "description": "A flowchart-first argument mapper.",
+  "license": "MIT",
+  "author": "Rees Draminski",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "dev": "node --watch server/index.js",
+    "server": "node server/index.js",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:unit": "vitest run",
+    "test:unit:watch": "vitest",
+    "lint": "oxlint client/ server/",
+    "fmt": "oxfmt client/ server/",
+    "fmt:check": "oxfmt --check client/ server/"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "vitest": "^4.1.7"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "express": "^4.21.2",
+    "oxfmt": "^0.52.0",
+    "oxlint": "^1.67.0"
+  },
+  "allowScripts": {
+    "better-sqlite3@12.10.0": true
+  }
+}

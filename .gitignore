@@ -1,0 +1,15 @@
+node_modules/
+dist/
+.vite/
+.DS_Store
+*.local
+*.log
+npm-debug.log*
+
+# Secrets and local state. Never commit a real .env — the arg-mapper server
+# reads an LLM API key from it.
+.env
+*.db
+test-results/
+playwright-report/
+.claude/

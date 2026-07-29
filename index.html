@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Visualizing philosophy</title>
+    <meta
+      name="description"
+      content="Interactive diagrams of philosophical structure: the free will debate, the parts of a religion, and the early history of thinking about thought."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --ink: #16130f;
+        --ink-soft: #55504a;
+        --paper: #faf7f2;
+        --rule: #ddd6ca;
+        --accent: #7c3f16;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --ink: #f2ede4;
+          --ink-soft: #a9a196;
+          --paper: #14120f;
+          --rule: #34302a;
+          --accent: #d9a066;
+        }
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: Spectral, Georgia, serif;
+        font-weight: 300;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      .wrap {
+        max-width: 46rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+      }
+
+      header {
+        padding: 5rem 0 3rem;
+      }
+
+      .eyebrow {
+        margin: 0 0 1rem;
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 0.72rem;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: var(--ink-soft);
+      }
+
+      h1 {
+        margin: 0 0 1.5rem;
+        font-size: clamp(2.4rem, 7vw, 3.6rem);
+        font-weight: 400;
+        line-height: 1.1;
+      }
+
+      h1 em {
+        color: var(--accent);
+      }
+
+      .standfirst {
+        margin: 0;
+        font-size: 1.12rem;
+        color: var(--ink-soft);
+      }
+
+      main {
+        padding-bottom: 5rem;
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        border-top: 1px solid var(--rule);
+      }
+
+      li {
+        border-bottom: 1px solid var(--rule);
+      }
+
+      li a,
+      li.local div {
+        display: block;
+        padding: 1.75rem 0;
+        color: inherit;
+        text-decoration: none;
+      }
+
+      /* Not a link: this one needs a server, so there is nowhere to send you. */
+      li.local {
+        opacity: 0.72;
+      }
+
+      li a:hover h2,
+      li a:focus-visible h2 {
+        color: var(--accent);
+      }
+
+      li a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
+      }
+
+      h2 {
+        margin: 0 0 0.4rem;
+        font-size: 1.5rem;
+        font-weight: 400;
+        transition: color 120ms ease;
+      }
+
+      li p {
+        margin: 0;
+        color: var(--ink-soft);
+      }
+
+      .also {
+        margin: 0.5rem 0 0;
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 0.75rem;
+        letter-spacing: 0.04em;
+        color: var(--ink-soft);
+      }
+
+      footer {
+        border-top: 1px solid var(--rule);
+        padding: 2rem 0 4rem;
+        font-family: "IBM Plex Mono", ui-monospace, monospace;
+        font-size: 0.75rem;
+        color: var(--ink-soft);
+      }
+
+      footer a {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <p class="eyebrow">A collection</p>
+        <h1>Visualizing <em>philosophy</em></h1>
+        <p class="standfirst">
+          Diagrams in philosophy aren't an outlier; they're an old tradition that got interrupted. Plato's divided line,
+          Llull's wheels, Euler's circles, Peirce's existential graphs. There is room for more, because structurally
+          complex debates are where prose strains hardest. Each piece below is a separate, self-contained visualization.
+        </p>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <ul>
+          <li>
+            <a href="./free-will-map/">
+              <h2>The free will map</h2>
+              <p>An interactive map of the free will debate as an aporetic cluster.</p>
+            </a>
+          </li>
+          <li>
+            <a href="./belief-mart/">
+              <h2>Belief Mart</h2>
+              <p>A shop where you assemble a religion from its parts, then find out what you built.</p>
+            </a>
+          </li>
+          <li>
+            <a href="./thinking-about-thinking/">
+              <h2>Thinking about thought</h2>
+              <p>
+                Two views on the early history of reflection about the mind: a comparative timeline and a character
+                cladogram.
+              </p>
+              <p class="also">Also: ./thinking-about-thinking/cladogram.html</p>
+            </a>
+          </li>
+          <li class="local">
+            <div>
+              <h2>Argument mapper</h2>
+              <p>
+                A dialogue-first argument mapper: the graph is the output of reasoning, not the working surface.
+              </p>
+              <p class="also">Runs locally — it needs a server. See arg-mapper/ in the repository.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="wrap">MIT licensed · source in this repository</div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+/* Reset and page ground. Everything else lives in FreeWillMap.jsx so the
+   component stays droppable into another project on its own. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: #e4e7ea;
+  color: #131c24;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+}
