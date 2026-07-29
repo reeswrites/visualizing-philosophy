@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>How to live &mdash; a premise atlas</title>
+    <meta
+      name="description"
+      content="Forty-seven answers to how one should live, clustered by what they assume and overlaid with what they inherited. Every coding is editable and half are unsourced."
+    />
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>How to live</h1>
+      <p class="sub" id="hdr"></p>
+
+      <p class="lede">
+        The tree clusters traditions by <em>what they assume</em>; the arcs record what they
+        <em>inherited</em>. Open a row to change a coding, or reweight the axes &mdash; the tree, the
+        arcs and every statistic recompute from your edit. Half the codings are unsourced, and the
+        tree says so.
+      </p>
+
+      <div class="ctl">
+        <button id="b-lin" aria-pressed="true">lineage</button>
+        <button id="b-con" aria-pressed="true">convergence</button>
+        <button id="b-sch" aria-pressed="true">schism</button>
+        <button id="b-clr">clear</button>
+        <button id="b-wt" aria-pressed="false">weights</button>
+        <button id="b-rst">reset</button>
+        <input type="search" id="filter" placeholder="filter&hellip;" aria-label="Filter traditions" />
+      </div>
+
+      <div id="weights" class="pane hide" role="group" aria-label="Axis weights"></div>
+
+      <div id="chart"></div>
+
+      <p class="key">
+        <span class="swatch" style="border-color: var(--ochre)"></span>documented influence (dashed =
+        contested)<br />
+        <span class="swatch" style="border-color: var(--verd); border-top-style: dotted"></span
+        >premise-close, no lineage path &mdash; convergence<br />
+        <span class="swatch" style="border-color: var(--oxide); border-top-style: dashed"></span
+        >direct descent, furthest premises &mdash; schism<br />
+        &#9650;Greek &#9632;Chinese &#9670;Indian &#10022;Abrahamic &#9679;academic &#9675;secular
+        &#9724;African &nbsp;&dagger;low confidence &nbsp;&deg;unsourced
+      </p>
+
+      <div id="editor" class="pane hide">
+        <p id="ename"></p>
+        <p id="enote"></p>
+        <p id="esrc"></p>
+        <div class="grid" id="egrid"></div>
+      </div>
+
+      <p class="stats" id="stats"></p>
+
+      <div class="rule"></div>
+
+      <h2>Compare two</h2>
+      <div class="pane">
+        <div class="cmp">
+          <div><label for="cmpA">A</label><select id="cmpA"></select></div>
+          <div><label for="cmpB">B</label><select id="cmpB"></select></div>
+        </div>
+        <table id="t-cmp"></table>
+        <p class="path" id="cmp-path"></p>
+      </div>
+
+      <h2>Convergence</h2>
+      <p class="lede">
+        Same premises, no path through the influence graph at all. <b>jk</b> is axis-jackknife
+        survival out of 7; <b>pt</b> is survival under random perturbation of the soft codings.
+        Adding Schopenhauer destroyed seven earlier convergence claims by connecting components that
+        had looked independent &mdash; the category is only as good as the graph.
+      </p>
+      <table id="t-con"></table>
+
+      <h2>Schism</h2>
+      <p class="lede">
+        Premise distance across an actual lineage edge, ranked. Descent preserves most premises even
+        through a break, so read it relatively.
+      </p>
+      <table id="t-sch"></table>
+
+      <h2>Support</h2>
+      <p class="lede">
+        Bootstrap over the axes, computed on the unedited codings. Nothing clears 70%: with seven
+        characters, no cluster here is strongly supported.
+      </p>
+      <table id="t-sup"></table>
+
+      <h2>Coherent but unoccupied</h2>
+      <p class="lede">
+        Combinations no tradition here holds, each adjacent to three or more that are held.
+      </p>
+      <ul class="mono" id="t-gap"></ul>
+
+      <div class="ctl" style="margin-top: 20px">
+        <button id="b-csv">export csv</button>
+        <button id="b-svg">export svg</button>
+        <button id="b-share">copy share link</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

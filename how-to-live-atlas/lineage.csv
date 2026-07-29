@@ -1,0 +1,50 @@
+from,to,type,confidence,note
+platonist,aristotelian,taught,high,Aristotle studied twenty years in the Academy
+cynic,stoic,taught,high,Zeno of Citium studied under the Cynic Crates
+platonist,stoic,read,med,Zeno also influenced by the Academy and the Megarians
+cyrenaic,epicurean,read,med,Ancient sources report Epicurus took his account of the end from the Cyrenaic school
+epicurean,cyrenaic,reacted,high,Later Cyrenaics rejected the identification of pleasure with removal of pain calling it the state of one asleep
+theravada,pyrrhonist,read,contested,Pyrrho travelled to India with Alexander and met gymnosophists; Beckwith argues decisive Buddhist influence but the claim is disputed
+platonist,monastic,read,high,Neoplatonism shaped Christian contemplative theology
+aristotelian,thomist,read,high,Aquinas built on the recovered Aristotelian corpus
+aristotelian,akhlaq,read,high,Miskawayh synthesised Aristotelian virtue with revelation
+akhlaq,thomist,read,med,Islamic commentators were a principal channel for Aristotle into Latin Europe
+theravada,mahayana,taught,high,Mahayana developed out of earlier Buddhist schools
+mahayana,chan,taught,high,Chan emerged within Mahayana in China
+daoist,chan,read,med,Daoist vocabulary and sensibility shaped Chan
+theravada,secbuddhist,read,high,Secular Buddhism draws directly on early Buddhist practice
+chan,secbuddhist,read,med,Zen was a major channel for Buddhism into the modern West
+confucian,neoconfucian,read,high,Neo-Confucianism is an explicit revival and systematisation
+daoist,neoconfucian,read,med,Neo-Confucian metaphysics absorbed Daoist and Buddhist cosmology
+confucian,mohist,reacted,high,Mohism attacked Confucian graded love as the source of disorder
+jain,theravada,read,med,Both arose in the same Sramana milieu with shared ascetic vocabulary
+yoga,advaita,read,med,Shared Samkhya-Yoga background and practices
+advaita,bhakti,reacted,med,Devotional theism developed partly against non-dualist impersonalism
+monastic,ignatian,read,high,The Exercises stand in a long monastic formation tradition
+bentham,mill,taught,high,Mill was raised in Benthamite utilitarianism by his father
+mill,singer,read,high,Direct utilitarian lineage
+bentham,singer,read,high,Direct utilitarian lineage
+singer,ea,read,high,Singer's arguments are foundational for effective altruism
+mill,ea,read,med,Utilitarian inheritance
+stoic,kantian,read,med,Kant read the Stoics and echoes them on duty and autonomy
+kantian,contractualist,read,high,Contractualism develops the Kantian tradition
+aristotelian,neoaristotelian,revived,high,Twentieth century virtue ethics revival after a long gap
+stoic,modstoic,revived,high,Modern Stoicism revives the ancient school selectively
+aristotelian,capabilities,read,high,Nussbaum's list is explicitly Aristotelian
+mill,capabilities,read,med,Liberal and perfectionist inheritance
+romantic,nietzschean,read,med,Romantic inwardness precedes and feeds the revaluation project
+romantic,existentialist,read,med,Authenticity as a Romantic inheritance
+nietzschean,existentialist,read,high,Direct and acknowledged influence
+nietzschean,absurdist,read,high,Camus engages Nietzsche throughout
+existentialist,absurdist,reacted,med,Camus rejected the existentialist label and the leap he called philosophical suicide
+neoaristotelian,narrative,read,med,MacIntyre's narrative unity of a life feeds narrative theories of wellbeing
+sufi_wujud,sufi_shuhud,reacted,high,Sirhindi's wahdat al-shuhud was formulated as a correction of Ibn Arabi
+advaita,schopenhauer,read,high,Read the Upanishads in Anquetil-Duperron's Latin translation and called them the consolation of his life
+theravada,schopenhauer,read,med,Buddhist sources reached him only through limited European intermediaries
+kantian,schopenhauer,read,high,Adopts and adapts Kantian idealism while inverting its account of value
+schopenhauer,nietzschean,read,high,Nietzsche's early debt and later revolt are both explicit
+confucian,yangism,reacted,high,Mencius attacked Yang Zhu and Mozi as the two symmetrical threats to Confucian order
+daoist,yangism,read,contested,Some sources treat Yang Zhu as an early Daoist naturalist; the Liezi material sits awkwardly with the rest of the text
+advaita,deepecology,read,contested,Reached Naess through Gandhi's Vedanta rather than directly
+romantic,deepecology,read,med,"Naess claimed Rousseau, Thoreau and Muir among his roots"
+theravada,deepecology,read,med,Buddhist interconnectedness cited among his influences

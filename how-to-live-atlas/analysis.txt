@@ -1,0 +1,61 @@
+======================================================================
+47 traditions | 49 edges | 7 axes
+lineage-connected pairs: 65.2%
+
+TREENESS   delta score 0.312   cophenetic 0.762
+           (delta 0 = perfect tree, 1 = maximally reticulate)
+
+ERA        premise-vs-time correlation r = 0.084
+           within 200yr mean dist 0.548 | beyond 0.628
+
+----------------------------------------------------------------------
+CONVERGENCES, with robustness
+  jk = axis-jackknife survival /7 ;  pt = perturbation survival %
+  0.000  jk7/7  pt100%  Advaita Vedanta ~ Sufism (wahdat al-wujud)
+  0.000  jk7/7  pt 99%  Bhakti ~ Sufism (wahdat al-shuhud)
+  0.000  jk7/7  pt100%  Christian monasticism ~ Sufism (wahdat al-shuhud)
+  0.071  jk7/7  pt 77%  Cyrenaicism ~ Carvaka LOW-CONF
+  0.143  jk7/7  pt100%  Epicureanism ~ Pyrrhonism
+  0.143  jk7/7  pt 91%  Epicureanism ~ Modern Stoicism
+  0.143  jk7/7  pt 90%  Confucianism ~ Ubuntu
+  0.143  jk7/7  pt 90%  Advaita Vedanta ~ Sufism (wahdat al-shuhud)
+  0.143  jk7/7  pt 80%  Bhakti ~ Sufism (wahdat al-wujud)
+  0.143  jk7/7  pt 89%  Christian monasticism ~ Sufism (wahdat al-wujud)
+  0.143  jk7/7  pt 90%  Ignatian spirituality ~ Sufism (wahdat al-shuhud)
+
+----------------------------------------------------------------------
+SCHISMS (ranked by premise distance across a lineage edge)
+  0.750  [read     ] Kantian deontology | Schopenhauerian pessimism
+  0.714  [read     ] Stoicism | Kantian deontology
+  0.679  [read     ] Advaita Vedanta | Deep ecology
+  0.643  [read     ] Schopenhauerian pessimism | Nietzschean self-creation
+  0.643  [reacted  ] Confucianism | Yangism
+  0.643  [read     ] Romantic authenticity | Deep ecology
+  0.571  [read     ] Daoism | Chan and Zen
+  0.571  [read     ] Neo-Aristotelian virtue ethics | Narrative and authenticity theories
+
+----------------------------------------------------------------------
+BEST-SUPPORTED CLUSTERS (bootstrap over axes, n=300)
+   68%  Contractualism, Kantian deontology
+   68%  Chan and Zen, Mahayana Buddhism
+   67%  Advaita Vedanta, Sufism (wahdat al-wujud)
+   66%  Classical utilitarianism, Millian utilitarianism
+   64%  Carvaka, Cyrenaicism
+   51%  Capabilities approach, Classical utilitarianism, Contractualism, Effective alt
+   42%  Absurdism, Existentialism, Narrative and authenticity theories, Nietzschean se
+   41%  Bhakti, Christian monasticism, Sufism (wahdat al-shuhud)
+   40%  Absurdism, Existentialism, Nietzschean self-creation
+   40%  Capabilities approach, Mohism
+
+----------------------------------------------------------------------
+COHERENT EMPTY CELLS (13 with >=3 occupied neighbours)
+  4 neighbours: self/positive_pleasure/self/reason/heavy/revisionary/none
+  3 neighbours: world/desire_satisfaction/all_humans/reason/none/descriptive/none
+  3 neighbours: world/positive_pleasure/all_humans/reason/none/descriptive/none
+  3 neighbours: world/objective_plural/all_sentient/reason/none/descriptive/none
+  3 neighbours: self/chosen_created/self/reason/none/revisionary/none
+  3 neighbours: world/rational_agency/all_sentient/reason/none/descriptive/none
+  3 neighbours: self/virtue_character/cosmos/reason/heavy/revisionary/impersonal_order
+  3 neighbours: self/absence_of_suffering/all_sentient/revelation/heavy/revisionary/no_self
+
+wrote data.json

@@ -17,6 +17,7 @@ These differ in whether interacting with them *generates* understanding or only 
 | `thinking-about-thinking` | **Contextualizes and aggregates.** You can see what happened where and when. The visualization itself probably isn't producing much new understanding. |
 | `free-will-map` | **Locates.** Toggling premises shows which position you have committed yourself to — an existing map, read off rather than built. |
 | `belief-mart` | **Elicits.** Shopping surfaces commitments you didn't know you had, then names the result. Centered on religion, but the mechanism adapts to any belief system. |
+| `how-to-live-atlas` | **Argues.** The codings are editable and the statistics recompute, so the reader can attack the diagram's own claims and watch a convergence break. |
 | `arg-mapper` | **Constructs.** The only one whose output is yours, and the only one that doubles as a tool for formalization. |
 
 Roughly: the further down that list, the more the diagram is a working surface rather than a display.
@@ -44,6 +45,7 @@ There's room for more, because that rigor objection has been answered (Shin, Bar
 | Directory | What it is | Ships to Pages |
 | --- | --- | --- |
 | [`free-will-map/`](free-will-map/) | An interactive map of the free will debate as an aporetic cluster. | yes |
+| [`how-to-live-atlas/`](how-to-live-atlas/) | Forty-seven answers to how one should live, clustered by premise and overlaid with lineage. Every coding is editable. | yes |
 | [`belief-mart/`](belief-mart/) | A shop where you assemble a religion from its parts, then find out what you built. | yes |
 | [`thinking-about-thinking/`](thinking-about-thinking/) | Two views on the early history of reflection about the mind: a comparative timeline and a character cladogram. | yes |
 | [`arg-mapper/`](arg-mapper/) | A dialogue-first argument mapper: the graph is the output of reasoning, not the working surface. | no — runs locally |

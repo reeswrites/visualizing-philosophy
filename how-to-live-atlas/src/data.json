@@ -1,0 +1,1894 @@
+{
+ "rows": [
+  {
+   "id": "cyrenaic",
+   "name": "Cyrenaicism",
+   "cluster": "greek",
+   "era": "-400",
+   "target": "self",
+   "good": "positive_pleasure",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Positive bodily pleasure of the present moment; explicitly denied that absence of pain is pleasure",
+   "source": "Diogenes Laertius II.87-89 (Cyrenaic rejection of Epicurean painlessness)",
+   "sourced": "yes"
+  },
+  {
+   "id": "epicurean",
+   "name": "Epicureanism",
+   "cluster": "greek",
+   "era": "-300",
+   "target": "self",
+   "good": "absence_of_suffering",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Ataraxia and aponia as the end; katastematic pleasure is the removal of pain",
+   "source": "Annas, The Morality of Happiness (1993), 188, 336; Wolfsdorf, Elenchos 36 (2015) on katastematic/kinetic",
+   "sourced": "yes"
+  },
+  {
+   "id": "stoic",
+   "name": "Stoicism",
+   "cluster": "greek",
+   "era": "-300",
+   "target": "self",
+   "good": "virtue_character",
+   "scope": "all_humans",
+   "authority": "reason",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "high",
+   "note": "Virtue the only good; oikeiosis grounded in shared rationality excludes animals",
+   "source": "Sedley, 'Oikeiosis', Routledge Encyclopedia of Philosophy; SEP 'Stoicism' 4.5-4.6",
+   "sourced": "yes"
+  },
+  {
+   "id": "cynic",
+   "name": "Cynicism",
+   "cluster": "greek",
+   "era": "-400",
+   "target": "self",
+   "good": "virtue_character",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "high",
+   "note": "Virtue as life according to nature; ascetic rejection of convention",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "pyrrhonist",
+   "name": "Pyrrhonism",
+   "cluster": "greek",
+   "era": "-330",
+   "target": "self",
+   "good": "absence_of_suffering",
+   "scope": "self",
+   "authority": "practice",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Ataraxia via suspension of judgement",
+   "source": "Beckwith, Greek Buddha (2015); Diogenes Laertius on Pyrrho and the gymnosophists; rev. BMCR 2016.02.32",
+   "sourced": "yes"
+  },
+  {
+   "id": "aristotelian",
+   "name": "Aristotelian eudaimonism",
+   "cluster": "greek",
+   "era": "-340",
+   "target": "self",
+   "good": "objective_plural",
+   "scope": "role_network",
+   "authority": "reason",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Eudaimonia as activity of virtue over a complete life",
+   "source": "Aristotle, Nicomachean Ethics, Irwin trans.; listed as an objective-list exemplar in Parfit (1984), 493",
+   "sourced": "yes"
+  },
+  {
+   "id": "platonist",
+   "name": "Platonism",
+   "cluster": "greek",
+   "era": "-380",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "reason",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "high",
+   "note": "Ascent to the Form of the Good",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "confucian",
+   "name": "Confucianism",
+   "cluster": "chinese",
+   "era": "-500",
+   "target": "self",
+   "good": "role_harmony",
+   "scope": "role_network",
+   "authority": "tradition",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Graded love; person constituted by roles rather than prior to them",
+   "source": "Rosemont & Ames, Confucian Role Ethics (2016); Ames (2011), 91, 168",
+   "sourced": "yes"
+  },
+  {
+   "id": "mohist",
+   "name": "Mohism",
+   "cluster": "chinese",
+   "era": "-430",
+   "target": "world",
+   "good": "objective_plural",
+   "scope": "all_humans",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Impartial care; basic goods are order material welfare and population not pleasure",
+   "source": "Fraser, The Philosophy of the Mozi: The First Consequentialists (2016); Mozi ch.14-16, Ivanhoe trans.",
+   "sourced": "yes"
+  },
+  {
+   "id": "daoist",
+   "name": "Daoism",
+   "cluster": "chinese",
+   "era": "-350",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "practice",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "med",
+   "note": "Wu wei and ziran; resists propositional statement of the good",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "neoconfucian",
+   "name": "Neo-Confucianism",
+   "cluster": "chinese",
+   "era": "1150",
+   "target": "self",
+   "good": "role_harmony",
+   "scope": "cosmos",
+   "authority": "tradition",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "med",
+   "note": "Role harmony extended to cosmic principle; heavy self-cultivation",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "chan",
+   "name": "Chan and Zen",
+   "cluster": "chinese",
+   "era": "700",
+   "target": "both",
+   "good": "absence_of_suffering",
+   "scope": "all_sentient",
+   "authority": "practice",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "no_self",
+   "confidence": "high",
+   "note": "Direct practice over doctrine; Mahayana bodhisattva orientation",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "theravada",
+   "name": "Early Buddhism",
+   "cluster": "indian",
+   "era": "-450",
+   "target": "self",
+   "good": "absence_of_suffering",
+   "scope": "all_sentient",
+   "authority": "practice",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "no_self",
+   "confidence": "high",
+   "note": "Cessation of dukkha; anatta denies the fixed self Stoicism assumes",
+   "source": "Four Noble Truths; anatta as one of the three marks of existence",
+   "sourced": "yes"
+  },
+  {
+   "id": "mahayana",
+   "name": "Mahayana Buddhism",
+   "cluster": "indian",
+   "era": "100",
+   "target": "both",
+   "good": "absence_of_suffering",
+   "scope": "all_sentient",
+   "authority": "practice",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "no_self",
+   "confidence": "high",
+   "note": "Bodhisattva vow turns liberation outward",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "advaita",
+   "name": "Advaita Vedanta",
+   "cluster": "indian",
+   "era": "800",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "identity_impersonal",
+   "confidence": "high",
+   "note": "Moksha as realisation of identity with Brahman",
+   "source": "Chandogya Upanishad mahavakya (tat tvam asi), as transmitted in the Schopenhauer reception literature",
+   "sourced": "yes"
+  },
+  {
+   "id": "jain",
+   "name": "Jainism",
+   "cluster": "indian",
+   "era": "-500",
+   "target": "self",
+   "good": "absence_of_suffering",
+   "scope": "all_sentient",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "liberated_soul",
+   "confidence": "high",
+   "note": "Ahimsa extended to all life; liberation through austerity",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "carvaka",
+   "name": "Carvaka",
+   "cluster": "indian",
+   "era": "-600",
+   "target": "self",
+   "good": "positive_pleasure",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "low",
+   "note": "Egoistic hedonism and materialism; hedonism charge may be hostile caricature and primary text is lost",
+   "source": "IEP, 'Lokayata/Carvaka - Indian Materialism'; Britannica, 'Charvaka'. Primary text (Brhaspati Sutra) lost; hedonism charge may be hostile.",
+   "sourced": "yes"
+  },
+  {
+   "id": "yoga",
+   "name": "Patanjali Yoga",
+   "cluster": "indian",
+   "era": "200",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "self",
+   "authority": "practice",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "liberated_soul",
+   "confidence": "high",
+   "note": "Eight limbs toward kaivalya",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "bhakti",
+   "name": "Bhakti",
+   "cluster": "indian",
+   "era": "700",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "med",
+   "note": "Devotional union with a personal god",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "monastic",
+   "name": "Christian monasticism",
+   "cluster": "abrahamic",
+   "era": "500",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "high",
+   "note": "Rule-governed common life ordered to God",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "thomist",
+   "name": "Thomistic natural law",
+   "cluster": "abrahamic",
+   "era": "1270",
+   "target": "both",
+   "good": "objective_plural",
+   "scope": "all_humans",
+   "authority": "revelation",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "high",
+   "note": "Objective goods knowable by reason and completed by grace",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "ignatian",
+   "name": "Ignatian spirituality",
+   "cluster": "abrahamic",
+   "era": "1540",
+   "target": "both",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "high",
+   "note": "Structured exercises and discernment then action in the world",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "sufi_wujud",
+   "name": "Sufism (wahdat al-wujud)",
+   "cluster": "abrahamic",
+   "era": "1200",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "identity_impersonal",
+   "confidence": "med",
+   "note": "Ibn Arabi lineage; union as the highest attainment, read by critics as tending to identity",
+   "source": "Ibn Arabi; Millati J. Islamic Studies & Humanities (Dec 2021) on wahdat al-wujud",
+   "sourced": "yes"
+  },
+  {
+   "id": "sufi_shuhud",
+   "name": "Sufism (wahdat al-shuhud)",
+   "cluster": "abrahamic",
+   "era": "1600",
+   "target": "self",
+   "good": "union_transcendent",
+   "scope": "cosmos",
+   "authority": "revelation",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "med",
+   "note": "Sirhindi lineage; union is one stage only and the final truth is difference and servitude",
+   "source": "Sirhindi, Maktubat; Firdaus & Sahib on wahdat al-shuhud as a correction of Ibn Arabi",
+   "sourced": "yes"
+  },
+  {
+   "id": "mussar",
+   "name": "Mussar",
+   "cluster": "abrahamic",
+   "era": "1000",
+   "target": "self",
+   "good": "virtue_character",
+   "scope": "role_network",
+   "authority": "tradition",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "med",
+   "note": "Systematic character correction within covenantal obligation",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "akhlaq",
+   "name": "Islamic akhlaq",
+   "cluster": "abrahamic",
+   "era": "980",
+   "target": "self",
+   "good": "virtue_character",
+   "scope": "all_humans",
+   "authority": "revelation",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "union_personal",
+   "confidence": "med",
+   "note": "Virtue ethics synthesising Aristotle with revelation",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "bentham",
+   "name": "Classical utilitarianism",
+   "cluster": "academic",
+   "era": "1789",
+   "target": "world",
+   "good": "positive_pleasure",
+   "scope": "all_sentient",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Aggregate pleasure over pain",
+   "source": "Bentham, Introduction to the Principles of Morals and Legislation; Parfit (1984), 493",
+   "sourced": "yes"
+  },
+  {
+   "id": "mill",
+   "name": "Millian utilitarianism",
+   "cluster": "academic",
+   "era": "1861",
+   "target": "world",
+   "good": "positive_pleasure",
+   "scope": "all_sentient",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Higher and lower pleasures; affinities with objective list views",
+   "source": "Mill, Utilitarianism (1861). Clark notes Mill is usually forced into hedonism despite Aristotelian affinities.",
+   "sourced": "yes"
+  },
+  {
+   "id": "singer",
+   "name": "Preference utilitarianism",
+   "cluster": "academic",
+   "era": "1975",
+   "target": "world",
+   "good": "desire_satisfaction",
+   "scope": "all_sentient",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Equal consideration of interests across species",
+   "source": "Singer, Animal Liberation (1975); utilitarianism.net, 'Theories of Well-Being'",
+   "sourced": "yes"
+  },
+  {
+   "id": "kantian",
+   "name": "Kantian deontology",
+   "cluster": "academic",
+   "era": "1785",
+   "target": "world",
+   "good": "rational_agency",
+   "scope": "all_humans",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "low",
+   "note": "Primarily a theory of right not of the good life; coding is a forced fit",
+   "source": "Kant, Groundwork (1785). Coding is a forced fit: primarily a theory of right, not of the good life.",
+   "sourced": "yes"
+  },
+  {
+   "id": "contractualist",
+   "name": "Contractualism",
+   "cluster": "academic",
+   "era": "1998",
+   "target": "world",
+   "good": "rational_agency",
+   "scope": "all_humans",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Principles no one could reasonably reject",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "capabilities",
+   "name": "Capabilities approach",
+   "cluster": "academic",
+   "era": "2011",
+   "target": "world",
+   "good": "objective_plural",
+   "scope": "all_humans",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Central capabilities as an explicit objective list",
+   "source": "Nussbaum, Creating Capabilities (2011); cited as an explicit objective list in Clark, 'Philosophical Taxonomies of Well-Being'",
+   "sourced": "yes"
+  },
+  {
+   "id": "egoist",
+   "name": "Ethical egoism",
+   "cluster": "academic",
+   "era": "1900",
+   "target": "self",
+   "good": "desire_satisfaction",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Agent-relative maximisation of own interest",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "careethics",
+   "name": "Care ethics",
+   "cluster": "academic",
+   "era": "1984",
+   "target": "both",
+   "good": "role_harmony",
+   "scope": "role_network",
+   "authority": "practice",
+   "askesis": "light",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Partiality and graded concern within concrete relationships",
+   "source": "Noddings, Caring (1984); Li Chenyang, Hypatia 9:1 (1994) on ren and care ethics",
+   "sourced": "yes"
+  },
+  {
+   "id": "neoaristotelian",
+   "name": "Neo-Aristotelian virtue ethics",
+   "cluster": "academic",
+   "era": "1981",
+   "target": "self",
+   "good": "virtue_character",
+   "scope": "role_network",
+   "authority": "tradition",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Revival of virtue and tradition against modern moral theory",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "narrative",
+   "name": "Narrative and authenticity theories",
+   "cluster": "academic",
+   "era": "1981",
+   "target": "self",
+   "good": "chosen_created",
+   "scope": "self",
+   "authority": "construction",
+   "askesis": "light",
+   "stance": "descriptive",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Wellbeing depends on self-narration or a reflexive relation to one's life",
+   "source": "MacIntyre, After Virtue (1981); Rosati, 'The Story of a Life', Soc. Phil. & Policy 30 (2013)",
+   "sourced": "yes"
+  },
+  {
+   "id": "ea",
+   "name": "Effective altruism",
+   "cluster": "secular",
+   "era": "2009",
+   "target": "world",
+   "good": "welfare_agnostic",
+   "scope": "all_sentient",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Impartial welfarism agnostic between theories of wellbeing",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "secbuddhist",
+   "name": "Secular Buddhism",
+   "cluster": "secular",
+   "era": "1990",
+   "target": "self",
+   "good": "absence_of_suffering",
+   "scope": "self",
+   "authority": "practice",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "no_self",
+   "confidence": "med",
+   "note": "Practice retained metaphysics dropped",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "modstoic",
+   "name": "Modern Stoicism",
+   "cluster": "secular",
+   "era": "2000",
+   "target": "self",
+   "good": "virtue_character",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Cognitive reframing techniques foregrounded scope narrowed to the self",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "absurdist",
+   "name": "Absurdism",
+   "cluster": "secular",
+   "era": "1942",
+   "target": "self",
+   "good": "chosen_created",
+   "scope": "self",
+   "authority": "construction",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Revolt refusing both suicide and transcendent hope; the move to affirming values is contested",
+   "source": "Camus, The Myth of Sisyphus (1942); SEP 'Albert Camus' (notes the move from nihilism to affirmation is contested)",
+   "sourced": "yes"
+  },
+  {
+   "id": "existentialist",
+   "name": "Existentialism",
+   "cluster": "secular",
+   "era": "1943",
+   "target": "self",
+   "good": "chosen_created",
+   "scope": "self",
+   "authority": "construction",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "high",
+   "note": "Existence precedes essence; value created by choice",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "nietzschean",
+   "name": "Nietzschean self-creation",
+   "cluster": "secular",
+   "era": "1883",
+   "target": "self",
+   "good": "chosen_created",
+   "scope": "self",
+   "authority": "construction",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Revaluation of values and amor fati",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "romantic",
+   "name": "Romantic authenticity",
+   "cluster": "secular",
+   "era": "1800",
+   "target": "self",
+   "good": "chosen_created",
+   "scope": "self",
+   "authority": "practice",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Fidelity to one's own inner nature and feeling",
+   "source": "unverified in this build - coded from general knowledge, not checked against a located source",
+   "sourced": "no"
+  },
+  {
+   "id": "schopenhauer",
+   "name": "Schopenhauerian pessimism",
+   "cluster": "secular",
+   "era": "1818",
+   "target": "self",
+   "good": "absence_of_suffering",
+   "scope": "all_sentient",
+   "authority": "reason",
+   "askesis": "heavy",
+   "stance": "revisionary",
+   "ultimate": "no_self",
+   "confidence": "med",
+   "note": "Denial of the will-to-live; individuation as illusion. The ultimate cell is a hard case: the metaphysics is monist (one Will) but the soteriology is extinction, not union",
+   "source": "Schopenhauer, WWR (1818); SEP 'Arthur Schopenhauer'; Upanishads via Anquetil-Duperron, Oupnek'hat (1801-02)",
+   "sourced": "yes"
+  },
+  {
+   "id": "yangism",
+   "name": "Yangism",
+   "cluster": "chinese",
+   "era": "-400",
+   "target": "self",
+   "good": "objective_plural",
+   "scope": "self",
+   "authority": "reason",
+   "askesis": "none",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "low",
+   "note": "Keeping one's nature and body intact; sources are hostile or fragmentary. Detractors call him a hedonist but contemporary sources describe naturalism, and he held it wrong to harm others",
+   "source": "Mengzi 7A26; Huainanzi 13.9; Graham on Yangism; SEP 'Zhuangzi'; Britannica 'Yang Zhu'",
+   "sourced": "yes"
+  },
+  {
+   "id": "ubuntu",
+   "name": "Ubuntu",
+   "cluster": "african",
+   "era": "1990",
+   "target": "both",
+   "good": "role_harmony",
+   "scope": "role_network",
+   "authority": "tradition",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "none",
+   "confidence": "med",
+   "note": "Personhood constituted through others; the community is source and custodian of moral standards. Metz: right action produces harmony and reduces discord",
+   "source": "Metz (2007), 334; Ramose (2002); Menkiti; IEP 'Hunhu/Ubuntu in Traditional Southern African Thought'",
+   "sourced": "yes"
+  },
+  {
+   "id": "deepecology",
+   "name": "Deep ecology",
+   "cluster": "secular",
+   "era": "1973",
+   "target": "both",
+   "good": "objective_plural",
+   "scope": "biosphere",
+   "authority": "practice",
+   "askesis": "light",
+   "stance": "revisionary",
+   "ultimate": "impersonal_order",
+   "confidence": "med",
+   "note": "Biospherical egalitarianism; intrinsic value independent of usefulness. Identification rather than moralizing",
+   "source": "Naess, 'The Shallow and the Deep, Long-Range Ecology Movements' (1973); Devall & Sessions (1985) platform, 69-70",
+   "sourced": "yes"
+  }
+ ],
+ "edges": [
+  {
+   "from": "platonist",
+   "to": "aristotelian",
+   "type": "taught",
+   "confidence": "high",
+   "note": "Aristotle studied twenty years in the Academy"
+  },
+  {
+   "from": "cynic",
+   "to": "stoic",
+   "type": "taught",
+   "confidence": "high",
+   "note": "Zeno of Citium studied under the Cynic Crates"
+  },
+  {
+   "from": "platonist",
+   "to": "stoic",
+   "type": "read",
+   "confidence": "med",
+   "note": "Zeno also influenced by the Academy and the Megarians"
+  },
+  {
+   "from": "cyrenaic",
+   "to": "epicurean",
+   "type": "read",
+   "confidence": "med",
+   "note": "Ancient sources report Epicurus took his account of the end from the Cyrenaic school"
+  },
+  {
+   "from": "epicurean",
+   "to": "cyrenaic",
+   "type": "reacted",
+   "confidence": "high",
+   "note": "Later Cyrenaics rejected the identification of pleasure with removal of pain calling it the state of one asleep"
+  },
+  {
+   "from": "theravada",
+   "to": "pyrrhonist",
+   "type": "read",
+   "confidence": "contested",
+   "note": "Pyrrho travelled to India with Alexander and met gymnosophists; Beckwith argues decisive Buddhist influence but the claim is disputed"
+  },
+  {
+   "from": "platonist",
+   "to": "monastic",
+   "type": "read",
+   "confidence": "high",
+   "note": "Neoplatonism shaped Christian contemplative theology"
+  },
+  {
+   "from": "aristotelian",
+   "to": "thomist",
+   "type": "read",
+   "confidence": "high",
+   "note": "Aquinas built on the recovered Aristotelian corpus"
+  },
+  {
+   "from": "aristotelian",
+   "to": "akhlaq",
+   "type": "read",
+   "confidence": "high",
+   "note": "Miskawayh synthesised Aristotelian virtue with revelation"
+  },
+  {
+   "from": "akhlaq",
+   "to": "thomist",
+   "type": "read",
+   "confidence": "med",
+   "note": "Islamic commentators were a principal channel for Aristotle into Latin Europe"
+  },
+  {
+   "from": "theravada",
+   "to": "mahayana",
+   "type": "taught",
+   "confidence": "high",
+   "note": "Mahayana developed out of earlier Buddhist schools"
+  },
+  {
+   "from": "mahayana",
+   "to": "chan",
+   "type": "taught",
+   "confidence": "high",
+   "note": "Chan emerged within Mahayana in China"
+  },
+  {
+   "from": "daoist",
+   "to": "chan",
+   "type": "read",
+   "confidence": "med",
+   "note": "Daoist vocabulary and sensibility shaped Chan"
+  },
+  {
+   "from": "theravada",
+   "to": "secbuddhist",
+   "type": "read",
+   "confidence": "high",
+   "note": "Secular Buddhism draws directly on early Buddhist practice"
+  },
+  {
+   "from": "chan",
+   "to": "secbuddhist",
+   "type": "read",
+   "confidence": "med",
+   "note": "Zen was a major channel for Buddhism into the modern West"
+  },
+  {
+   "from": "confucian",
+   "to": "neoconfucian",
+   "type": "read",
+   "confidence": "high",
+   "note": "Neo-Confucianism is an explicit revival and systematisation"
+  },
+  {
+   "from": "daoist",
+   "to": "neoconfucian",
+   "type": "read",
+   "confidence": "med",
+   "note": "Neo-Confucian metaphysics absorbed Daoist and Buddhist cosmology"
+  },
+  {
+   "from": "confucian",
+   "to": "mohist",
+   "type": "reacted",
+   "confidence": "high",
+   "note": "Mohism attacked Confucian graded love as the source of disorder"
+  },
+  {
+   "from": "jain",
+   "to": "theravada",
+   "type": "read",
+   "confidence": "med",
+   "note": "Both arose in the same Sramana milieu with shared ascetic vocabulary"
+  },
+  {
+   "from": "yoga",
+   "to": "advaita",
+   "type": "read",
+   "confidence": "med",
+   "note": "Shared Samkhya-Yoga background and practices"
+  },
+  {
+   "from": "advaita",
+   "to": "bhakti",
+   "type": "reacted",
+   "confidence": "med",
+   "note": "Devotional theism developed partly against non-dualist impersonalism"
+  },
+  {
+   "from": "monastic",
+   "to": "ignatian",
+   "type": "read",
+   "confidence": "high",
+   "note": "The Exercises stand in a long monastic formation tradition"
+  },
+  {
+   "from": "bentham",
+   "to": "mill",
+   "type": "taught",
+   "confidence": "high",
+   "note": "Mill was raised in Benthamite utilitarianism by his father"
+  },
+  {
+   "from": "mill",
+   "to": "singer",
+   "type": "read",
+   "confidence": "high",
+   "note": "Direct utilitarian lineage"
+  },
+  {
+   "from": "bentham",
+   "to": "singer",
+   "type": "read",
+   "confidence": "high",
+   "note": "Direct utilitarian lineage"
+  },
+  {
+   "from": "singer",
+   "to": "ea",
+   "type": "read",
+   "confidence": "high",
+   "note": "Singer's arguments are foundational for effective altruism"
+  },
+  {
+   "from": "mill",
+   "to": "ea",
+   "type": "read",
+   "confidence": "med",
+   "note": "Utilitarian inheritance"
+  },
+  {
+   "from": "stoic",
+   "to": "kantian",
+   "type": "read",
+   "confidence": "med",
+   "note": "Kant read the Stoics and echoes them on duty and autonomy"
+  },
+  {
+   "from": "kantian",
+   "to": "contractualist",
+   "type": "read",
+   "confidence": "high",
+   "note": "Contractualism develops the Kantian tradition"
+  },
+  {
+   "from": "aristotelian",
+   "to": "neoaristotelian",
+   "type": "revived",
+   "confidence": "high",
+   "note": "Twentieth century virtue ethics revival after a long gap"
+  },
+  {
+   "from": "stoic",
+   "to": "modstoic",
+   "type": "revived",
+   "confidence": "high",
+   "note": "Modern Stoicism revives the ancient school selectively"
+  },
+  {
+   "from": "aristotelian",
+   "to": "capabilities",
+   "type": "read",
+   "confidence": "high",
+   "note": "Nussbaum's list is explicitly Aristotelian"
+  },
+  {
+   "from": "mill",
+   "to": "capabilities",
+   "type": "read",
+   "confidence": "med",
+   "note": "Liberal and perfectionist inheritance"
+  },
+  {
+   "from": "romantic",
+   "to": "nietzschean",
+   "type": "read",
+   "confidence": "med",
+   "note": "Romantic inwardness precedes and feeds the revaluation project"
+  },
+  {
+   "from": "romantic",
+   "to": "existentialist",
+   "type": "read",
+   "confidence": "med",
+   "note": "Authenticity as a Romantic inheritance"
+  },
+  {
+   "from": "nietzschean",
+   "to": "existentialist",
+   "type": "read",
+   "confidence": "high",
+   "note": "Direct and acknowledged influence"
+  },
+  {
+   "from": "nietzschean",
+   "to": "absurdist",
+   "type": "read",
+   "confidence": "high",
+   "note": "Camus engages Nietzsche throughout"
+  },
+  {
+   "from": "existentialist",
+   "to": "absurdist",
+   "type": "reacted",
+   "confidence": "med",
+   "note": "Camus rejected the existentialist label and the leap he called philosophical suicide"
+  },
+  {
+   "from": "neoaristotelian",
+   "to": "narrative",
+   "type": "read",
+   "confidence": "med",
+   "note": "MacIntyre's narrative unity of a life feeds narrative theories of wellbeing"
+  },
+  {
+   "from": "sufi_wujud",
+   "to": "sufi_shuhud",
+   "type": "reacted",
+   "confidence": "high",
+   "note": "Sirhindi's wahdat al-shuhud was formulated as a correction of Ibn Arabi"
+  },
+  {
+   "from": "advaita",
+   "to": "schopenhauer",
+   "type": "read",
+   "confidence": "high",
+   "note": "Read the Upanishads in Anquetil-Duperron's Latin translation and called them the consolation of his life"
+  },
+  {
+   "from": "theravada",
+   "to": "schopenhauer",
+   "type": "read",
+   "confidence": "med",
+   "note": "Buddhist sources reached him only through limited European intermediaries"
+  },
+  {
+   "from": "kantian",
+   "to": "schopenhauer",
+   "type": "read",
+   "confidence": "high",
+   "note": "Adopts and adapts Kantian idealism while inverting its account of value"
+  },
+  {
+   "from": "schopenhauer",
+   "to": "nietzschean",
+   "type": "read",
+   "confidence": "high",
+   "note": "Nietzsche's early debt and later revolt are both explicit"
+  },
+  {
+   "from": "confucian",
+   "to": "yangism",
+   "type": "reacted",
+   "confidence": "high",
+   "note": "Mencius attacked Yang Zhu and Mozi as the two symmetrical threats to Confucian order"
+  },
+  {
+   "from": "daoist",
+   "to": "yangism",
+   "type": "read",
+   "confidence": "contested",
+   "note": "Some sources treat Yang Zhu as an early Daoist naturalist; the Liezi material sits awkwardly with the rest of the text"
+  },
+  {
+   "from": "advaita",
+   "to": "deepecology",
+   "type": "read",
+   "confidence": "contested",
+   "note": "Reached Naess through Gandhi's Vedanta rather than directly"
+  },
+  {
+   "from": "romantic",
+   "to": "deepecology",
+   "type": "read",
+   "confidence": "med",
+   "note": "Naess claimed Rousseau, Thoreau and Muir among his roots"
+  },
+  {
+   "from": "theravada",
+   "to": "deepecology",
+   "type": "read",
+   "confidence": "med",
+   "note": "Buddhist interconnectedness cited among his influences"
+  }
+ ],
+ "axes": [
+  "target",
+  "good",
+  "scope",
+  "authority",
+  "askesis",
+  "stance",
+  "ultimate"
+ ],
+ "states": {
+  "target": [
+   "both",
+   "self",
+   "world"
+  ],
+  "good": [
+   "absence_of_suffering",
+   "chosen_created",
+   "desire_satisfaction",
+   "objective_plural",
+   "positive_pleasure",
+   "rational_agency",
+   "role_harmony",
+   "union_transcendent",
+   "virtue_character",
+   "welfare_agnostic"
+  ],
+  "scope": [
+   "all_humans",
+   "all_sentient",
+   "biosphere",
+   "cosmos",
+   "role_network",
+   "self"
+  ],
+  "authority": [
+   "construction",
+   "practice",
+   "reason",
+   "revelation",
+   "tradition"
+  ],
+  "askesis": [
+   "heavy",
+   "light",
+   "none"
+  ],
+  "stance": [
+   "descriptive",
+   "revisionary"
+  ],
+  "ultimate": [
+   "identity_impersonal",
+   "impersonal_order",
+   "liberated_soul",
+   "no_self",
+   "none",
+   "union_personal"
+  ]
+ },
+ "perturb": {
+  "cyrenaic|carvaka": 76.8,
+  "epicurean|pyrrhonist": 100,
+  "epicurean|modstoic": 91,
+  "confucian|ubuntu": 90.5,
+  "advaita|sufi_wujud": 100,
+  "advaita|sufi_shuhud": 90.2,
+  "bhakti|sufi_wujud": 80,
+  "bhakti|sufi_shuhud": 98.8,
+  "monastic|sufi_wujud": 89.2,
+  "monastic|sufi_shuhud": 100,
+  "ignatian|sufi_shuhud": 90.2,
+  "ignatian|sufi_wujud": 1.5,
+  "epicurean|secbuddhist": 0.8,
+  "cyrenaic|aristotelian": 0.8,
+  "stoic|mussar": 0.8,
+  "epicurean|schopenhauer": 0.8,
+  "careethics|ubuntu": 2.2,
+  "carvaka|romantic": 1.2,
+  "carvaka|absurdist": 1.2,
+  "neoaristotelian|ubuntu": 1,
+  "carvaka|egoist": 2.8,
+  "cyrenaic|modstoic": 2,
+  "epicurean|carvaka": 0.5,
+  "carvaka|modstoic": 2.5,
+  "mussar|akhlaq": 3,
+  "mussar|neoaristotelian": 1.2,
+  "mohist|carvaka": 0.2,
+  "carvaka|existentialist": 0.5,
+  "platonist|sufi_shuhud": 0.8,
+  "cyrenaic|nietzschean": 1,
+  "carvaka|yangism": 0.5,
+  "platonist|sufi_wujud": 0.8,
+  "sufi_shuhud|akhlaq": 0.2
+ },
+ "support": [
+  {
+   "members": [
+    "contractualist",
+    "kantian"
+   ],
+   "pct": 67.7
+  },
+  {
+   "members": [
+    "chan",
+    "mahayana"
+   ],
+   "pct": 67.7
+  },
+  {
+   "members": [
+    "advaita",
+    "sufi_wujud"
+   ],
+   "pct": 67
+  },
+  {
+   "members": [
+    "bentham",
+    "mill"
+   ],
+   "pct": 66
+  },
+  {
+   "members": [
+    "carvaka",
+    "cyrenaic"
+   ],
+   "pct": 64.3
+  },
+  {
+   "members": [
+    "bentham",
+    "capabilities",
+    "contractualist",
+    "ea",
+    "kantian",
+    "mill",
+    "mohist",
+    "singer"
+   ],
+   "pct": 51.3
+  },
+  {
+   "members": [
+    "absurdist",
+    "existentialist",
+    "narrative",
+    "nietzschean",
+    "romantic"
+   ],
+   "pct": 41.7
+  },
+  {
+   "members": [
+    "bhakti",
+    "monastic",
+    "sufi_shuhud"
+   ],
+   "pct": 40.7
+  },
+  {
+   "members": [
+    "absurdist",
+    "existentialist",
+    "nietzschean"
+   ],
+   "pct": 39.7
+  },
+  {
+   "members": [
+    "capabilities",
+    "mohist"
+   ],
+   "pct": 39.7
+  },
+  {
+   "members": [
+    "absurdist",
+    "existentialist"
+   ],
+   "pct": 39
+  },
+  {
+   "members": [
+    "advaita",
+    "bhakti",
+    "ignatian",
+    "monastic",
+    "sufi_shuhud",
+    "sufi_wujud"
+   ],
+   "pct": 37
+  },
+  {
+   "members": [
+    "absurdist",
+    "existentialist",
+    "nietzschean",
+    "romantic"
+   ],
+   "pct": 36.3
+  },
+  {
+   "members": [
+    "advaita",
+    "bhakti",
+    "monastic",
+    "sufi_shuhud",
+    "sufi_wujud"
+   ],
+   "pct": 36.3
+  },
+  {
+   "members": [
+    "epicurean",
+    "pyrrhonist"
+   ],
+   "pct": 36
+  },
+  {
+   "members": [
+    "cynic",
+    "stoic"
+   ],
+   "pct": 34.7
+  },
+  {
+   "members": [
+    "daoist",
+    "platonist"
+   ],
+   "pct": 30
+  },
+  {
+   "members": [
+    "chan",
+    "mahayana",
+    "schopenhauer",
+    "secbuddhist",
+    "theravada"
+   ],
+   "pct": 29.7
+  },
+  {
+   "members": [
+    "deepecology",
+    "thomist"
+   ],
+   "pct": 29.7
+  },
+  {
+   "members": [
+    "bentham",
+    "mill",
+    "singer"
+   ],
+   "pct": 27
+  },
+  {
+   "members": [
+    "confucian",
+    "neoaristotelian"
+   ],
+   "pct": 26.7
+  },
+  {
+   "members": [
+    "akhlaq",
+    "mussar"
+   ],
+   "pct": 24.3
+  },
+  {
+   "members": [
+    "confucian",
+    "neoaristotelian",
+    "ubuntu"
+   ],
+   "pct": 21.7
+  },
+  {
+   "members": [
+    "cynic",
+    "modstoic",
+    "stoic"
+   ],
+   "pct": 20.3
+  },
+  {
+   "members": [
+    "daoist",
+    "neoconfucian",
+    "platonist"
+   ],
+   "pct": 19.7
+  },
+  {
+   "members": [
+    "chan",
+    "mahayana",
+    "secbuddhist",
+    "theravada"
+   ],
+   "pct": 19.3
+  },
+  {
+   "members": [
+    "absurdist",
+    "advaita",
+    "akhlaq",
+    "aristotelian",
+    "bhakti",
+    "careethics",
+    "carvaka",
+    "chan",
+    "confucian",
+    "cynic",
+    "cyrenaic",
+    "daoist",
+    "deepecology",
+    "egoist",
+    "epicurean",
+    "existentialist",
+    "ignatian",
+    "jain",
+    "mahayana",
+    "modstoic",
+    "monastic",
+    "mussar",
+    "narrative",
+    "neoaristotelian",
+    "neoconfucian",
+    "nietzschean",
+    "platonist",
+    "pyrrhonist",
+    "romantic",
+    "schopenhauer",
+    "secbuddhist",
+    "stoic",
+    "sufi_shuhud",
+    "sufi_wujud",
+    "theravada",
+    "thomist",
+    "ubuntu",
+    "yangism",
+    "yoga"
+   ],
+   "pct": 17.3
+  },
+  {
+   "members": [
+    "secbuddhist",
+    "theravada"
+   ],
+   "pct": 17
+  },
+  {
+   "members": [
+    "bentham",
+    "contractualist",
+    "kantian",
+    "mill",
+    "singer"
+   ],
+   "pct": 13
+  },
+  {
+   "members": [
+    "bentham",
+    "capabilities",
+    "contractualist",
+    "kantian",
+    "mill",
+    "mohist",
+    "singer"
+   ],
+   "pct": 12.7
+  },
+  {
+   "members": [
+    "advaita",
+    "bhakti",
+    "daoist",
+    "ignatian",
+    "monastic",
+    "neoconfucian",
+    "platonist",
+    "sufi_shuhud",
+    "sufi_wujud"
+   ],
+   "pct": 11.3
+  },
+  {
+   "members": [
+    "aristotelian",
+    "confucian",
+    "neoaristotelian",
+    "ubuntu"
+   ],
+   "pct": 7.7
+  },
+  {
+   "members": [
+    "chan",
+    "jain",
+    "mahayana",
+    "schopenhauer",
+    "secbuddhist",
+    "theravada"
+   ],
+   "pct": 7
+  },
+  {
+   "members": [
+    "advaita",
+    "bhakti",
+    "daoist",
+    "ignatian",
+    "monastic",
+    "neoconfucian",
+    "platonist",
+    "sufi_shuhud",
+    "sufi_wujud",
+    "yoga"
+   ],
+   "pct": 3.7
+  },
+  {
+   "members": [
+    "carvaka",
+    "cyrenaic",
+    "epicurean",
+    "pyrrhonist"
+   ],
+   "pct": 2.7
+  },
+  {
+   "members": [
+    "absurdist",
+    "egoist",
+    "existentialist",
+    "narrative",
+    "nietzschean",
+    "romantic"
+   ],
+   "pct": 2.7
+  },
+  {
+   "members": [
+    "careethics",
+    "deepecology",
+    "thomist"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "advaita",
+    "bhakti",
+    "chan",
+    "daoist",
+    "ignatian",
+    "jain",
+    "mahayana",
+    "monastic",
+    "neoconfucian",
+    "platonist",
+    "schopenhauer",
+    "secbuddhist",
+    "sufi_shuhud",
+    "sufi_wujud",
+    "theravada",
+    "yoga"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "absurdist",
+    "advaita",
+    "akhlaq",
+    "aristotelian",
+    "bhakti",
+    "carvaka",
+    "chan",
+    "confucian",
+    "cynic",
+    "cyrenaic",
+    "daoist",
+    "egoist",
+    "epicurean",
+    "existentialist",
+    "ignatian",
+    "jain",
+    "mahayana",
+    "modstoic",
+    "monastic",
+    "mussar",
+    "narrative",
+    "neoaristotelian",
+    "neoconfucian",
+    "nietzschean",
+    "platonist",
+    "pyrrhonist",
+    "romantic",
+    "schopenhauer",
+    "secbuddhist",
+    "stoic",
+    "sufi_shuhud",
+    "sufi_wujud",
+    "theravada",
+    "ubuntu",
+    "yangism",
+    "yoga"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "carvaka",
+    "cynic",
+    "cyrenaic",
+    "epicurean",
+    "modstoic",
+    "pyrrhonist",
+    "stoic",
+    "yangism"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "akhlaq",
+    "aristotelian",
+    "confucian",
+    "mussar",
+    "neoaristotelian",
+    "ubuntu"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "carvaka",
+    "cynic",
+    "cyrenaic",
+    "epicurean",
+    "modstoic",
+    "pyrrhonist",
+    "stoic"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "absurdist",
+    "carvaka",
+    "cynic",
+    "cyrenaic",
+    "egoist",
+    "epicurean",
+    "existentialist",
+    "modstoic",
+    "narrative",
+    "nietzschean",
+    "pyrrhonist",
+    "romantic",
+    "stoic",
+    "yangism"
+   ],
+   "pct": 0.3
+  },
+  {
+   "members": [
+    "absurdist",
+    "akhlaq",
+    "aristotelian",
+    "carvaka",
+    "confucian",
+    "cynic",
+    "cyrenaic",
+    "egoist",
+    "epicurean",
+    "existentialist",
+    "modstoic",
+    "mussar",
+    "narrative",
+    "neoaristotelian",
+    "nietzschean",
+    "pyrrhonist",
+    "romantic",
+    "stoic",
+    "ubuntu",
+    "yangism"
+   ],
+   "pct": 0.3
+  }
+ ],
+ "gaps": [
+  {
+   "code": {
+    "target": "self",
+    "good": "positive_pleasure",
+    "scope": "self",
+    "authority": "reason",
+    "askesis": "heavy",
+    "stance": "revisionary",
+    "ultimate": "none"
+   },
+   "neighbours": 4
+  },
+  {
+   "code": {
+    "target": "world",
+    "good": "desire_satisfaction",
+    "scope": "all_humans",
+    "authority": "reason",
+    "askesis": "none",
+    "stance": "descriptive",
+    "ultimate": "none"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "world",
+    "good": "positive_pleasure",
+    "scope": "all_humans",
+    "authority": "reason",
+    "askesis": "none",
+    "stance": "descriptive",
+    "ultimate": "none"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "world",
+    "good": "objective_plural",
+    "scope": "all_sentient",
+    "authority": "reason",
+    "askesis": "none",
+    "stance": "descriptive",
+    "ultimate": "none"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "self",
+    "good": "chosen_created",
+    "scope": "self",
+    "authority": "reason",
+    "askesis": "none",
+    "stance": "revisionary",
+    "ultimate": "none"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "world",
+    "good": "rational_agency",
+    "scope": "all_sentient",
+    "authority": "reason",
+    "askesis": "none",
+    "stance": "descriptive",
+    "ultimate": "none"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "self",
+    "good": "virtue_character",
+    "scope": "cosmos",
+    "authority": "reason",
+    "askesis": "heavy",
+    "stance": "revisionary",
+    "ultimate": "impersonal_order"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "self",
+    "good": "absence_of_suffering",
+    "scope": "all_sentient",
+    "authority": "revelation",
+    "askesis": "heavy",
+    "stance": "revisionary",
+    "ultimate": "no_self"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "self",
+    "good": "absence_of_suffering",
+    "scope": "self",
+    "authority": "reason",
+    "askesis": "heavy",
+    "stance": "revisionary",
+    "ultimate": "no_self"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "self",
+    "good": "absence_of_suffering",
+    "scope": "self",
+    "authority": "practice",
+    "askesis": "heavy",
+    "stance": "revisionary",
+    "ultimate": "liberated_soul"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "world",
+    "good": "welfare_agnostic",
+    "scope": "all_sentient",
+    "authority": "reason",
+    "askesis": "none",
+    "stance": "descriptive",
+    "ultimate": "none"
+   },
+   "neighbours": 3
+  },
+  {
+   "code": {
+    "target": "self",
+    "good": "union_transcendent",
+    "scope": "cosmos",
+    "authority": "revelation",
+    "askesis": "heavy",
+    "stance": "revisionary",
+    "ultimate": "impersonal_order"
+   },
+   "neighbours": 3
+  }
+ ]
+}
