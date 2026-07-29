@@ -38,6 +38,33 @@ npm run dev
 
 Open `http://localhost:3001`.
 
+## Two ways to run it
+
+The same client code runs with or without a backend, and works out which at
+startup by probing `/api/health`.
+
+| | Sessions | AI Guide |
+| --- | --- | --- |
+| `npm run dev` (Express) | SQLite, in `data.db` | Yes, with an API key |
+| `npm run build` (static files) | IndexedDB, in the browser | No — scripted prompts |
+
+Nothing about the reasoning flow depends on the network: the dialogue state
+machine produces a scripted prompt for every step, and the Guide only ever
+rephrases it. Served statically, the Guide toggle is disabled and says why.
+
+The static build is what deploys to GitHub Pages. `npm run build` copies
+`client/` to `dist/` — there is no bundler, since the client is plain ES modules
+and loads D3 from a CDN through an import map.
+
+Sessions in the browser go to IndexedDB rather than localStorage: an argument
+tree is unbounded, and localStorage is a synchronous 5MB cliff. localStorage is
+the fallback where IndexedDB is unavailable. Either way the records carry the
+same shape and timestamps the SQLite backend returns, so nothing downstream
+knows which is in use.
+
+**A browser-stored session is local to that browser.** No sync, and clearing
+site data deletes it.
+
 ## AI Guide setup
 
 The AI Guide is optional. Without a key the app runs in scripted mode with no degradation.
@@ -60,9 +87,11 @@ AI_MODEL=anthropic/claude-3.5-haiku
 |---|---|
 | `npm run dev` | Express dev server with `--watch` at `http://localhost:3001` |
 | `npm run server` | Express (production, no watch) |
-| `npm test` | Playwright end-to-end tests (auto-starts dev server) |
+| `npm run build` | Static build into `dist/` — browser sessions, no AI Guide |
+| `npm run preview` | Build, then serve `dist/` with no backend at all |
+| `npm test` | Vitest unit tests (node env, no browser) — what CI runs |
+| `npm run test:e2e` | Playwright end-to-end tests (auto-starts dev server) |
 | `npm run test:ui` | Playwright with interactive UI |
-| `npm run test:unit` | Vitest unit tests (node env, no browser) |
 | `npm run lint` | oxlint |
 | `npm run fmt` | oxfmt (auto-fix) |
 | `npm run fmt:check` | oxfmt (check only, no writes) |
@@ -77,8 +106,12 @@ client/
     dialogue.js      — state machine: contention → premise → co-premise → objection → rebuttal
     graph.js         — D3 rendering: map mode and focus mode
     tree-utils.js    — layout computation and subtree helpers
-    session.js       — session persistence and AI streaming fetch
+    session.js       — picks a backend (server or browser), AI streaming fetch
+    store/
+      local-store.js — IndexedDB session store, localStorage fallback
   css/               — styles
+scripts/
+  build-static.mjs   — copies client/ to dist/ for the serverless deployment
 server/
   index.js           — Express; static file serving + API routes
   db.js              — SQLite session storage (better-sqlite3)
@@ -87,7 +120,7 @@ server/
     socratic.js      — prompt building utilities
 tests/
   e2e/               — Playwright end-to-end tests
-  unit/              — Vitest unit tests (dialogue, tree-utils, socratic)
+  unit/              — Vitest unit tests (dialogue, tree-utils, socratic, local-store)
 ```
 
 ## Background

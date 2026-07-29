@@ -48,11 +48,15 @@ There's room for more, because that rigor objection has been answered (Shin, Bar
 | [`how-to-live-atlas/`](how-to-live-atlas/) | Forty-seven answers to how one should live, clustered by premise and overlaid with lineage. Every coding is editable. | yes |
 | [`belief-mart/`](belief-mart/) | A shop where you assemble a religion from its parts, then find out what you built. | yes |
 | [`thinking-about-thinking/`](thinking-about-thinking/) | Two views on the early history of reflection about the mind: a comparative timeline and a character cladogram. | yes |
-| [`arg-mapper/`](arg-mapper/) | A dialogue-first argument mapper: the graph is the output of reasoning, not the working surface. | no — runs locally |
+| [`arg-mapper/`](arg-mapper/) | A dialogue-first argument mapper: the graph is the output of reasoning, not the working surface. | yes — scripted mode |
 
 Each has its own README, dependencies and build.
 
-`arg-mapper` is the odd one out: an Express server with SQLite session storage and an optional LLM-backed Socratic guide, so it can't be a static page. Run it locally (`cd arg-mapper && npm install && npm run dev`). The deploy workflow skips it rather than failing on it.
+`arg-mapper` runs two ways from the same client code. Served statically it keeps
+sessions in the browser (IndexedDB, falling back to localStorage) and uses the
+dialogue's scripted prompts. Run its Express server instead
+(`cd arg-mapper && npm install && npm run dev`) and the same files get SQLite
+persistence and the LLM-backed Socratic guide.
 
 ## Working on one
 

@@ -95,6 +95,13 @@ body {
   display: none;
 }
 
+/* No server behind the page, so the Guide cannot reach an LLM. Dimmed rather
+   than hidden: the control explains itself on hover. */
+.ai-toggle-wrap.is-unavailable {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
 .toggle-track {
   width: 32px;
   height: 18px;

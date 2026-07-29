@@ -98,34 +98,30 @@
         border-bottom: 1px solid var(--rule);
       }
 
-      li a,
-      li.local div {
-        display: block;
+      li > div {
         padding: 1.75rem 0;
-        color: inherit;
-        text-decoration: none;
-      }
-
-      /* Not a link: this one needs a server, so there is nowhere to send you. */
-      li.local {
-        opacity: 0.72;
-      }
-
-      li a:hover h2,
-      li a:focus-visible h2 {
-        color: var(--accent);
-      }
-
-      li a:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 4px;
       }
 
       h2 {
         margin: 0 0 0.4rem;
         font-size: 1.5rem;
         font-weight: 400;
+      }
+
+      h2 a {
+        color: inherit;
+        text-decoration: none;
         transition: color 120ms ease;
+      }
+
+      a:hover,
+      a:focus-visible {
+        color: var(--accent);
+      }
+
+      a:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 4px;
       }
 
       li p {
@@ -133,12 +129,29 @@
         color: var(--ink-soft);
       }
 
-      .also {
-        margin: 0.5rem 0 0;
+      /* Secondary destinations — a second view, or a note about how to run it.
+         Real links rather than printed paths: a card is one <li>, not one <a>,
+         precisely so these can be links. */
+      .more {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.35rem 1rem;
+        margin: 0.6rem 0 0;
         font-family: "IBM Plex Mono", ui-monospace, monospace;
         font-size: 0.75rem;
         letter-spacing: 0.04em;
         color: var(--ink-soft);
+      }
+
+      .more a {
+        color: var(--ink-soft);
+        text-decoration: none;
+        border-bottom: 1px solid var(--rule);
+      }
+
+      .more code {
+        font-family: inherit;
+        color: var(--ink);
       }
 
       footer {
@@ -171,43 +184,48 @@
       <div class="wrap">
         <ul>
           <li>
-            <a href="./free-will-map/">
-              <h2>The free will map</h2>
+            <div>
+              <h2><a href="./free-will-map/">The free will map</a></h2>
               <p>An interactive map of the free will debate as an aporetic cluster.</p>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="./how-to-live-atlas/">
-              <h2>How to live</h2>
+            <div>
+              <h2><a href="./how-to-live-atlas/">How to live</a></h2>
               <p>
                 Forty-seven answers to how one should live, clustered by what they assume and overlaid with what
                 they inherited. Every coding is editable.
               </p>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="./belief-mart/">
-              <h2>Belief Mart</h2>
+            <div>
+              <h2><a href="./belief-mart/">Belief Mart</a></h2>
               <p>A shop where you assemble a religion from its parts, then find out what you built.</p>
-            </a>
+            </div>
           </li>
           <li>
-            <a href="./thinking-about-thinking/">
-              <h2>Thinking about thought</h2>
+            <div>
+              <h2><a href="./thinking-about-thinking/">Thinking about thought</a></h2>
               <p>
                 Two views on the early history of reflection about the mind: a comparative timeline and a character
                 cladogram.
               </p>
-              <p class="also">Also: ./thinking-about-thinking/cladogram.html</p>
-            </a>
+              <p class="more">
+                <a href="./thinking-about-thinking/">Timeline</a>
+                <a href="./thinking-about-thinking/cladogram.html">Cladogram</a>
+              </p>
+            </div>
           </li>
-          <li class="local">
+          <li>
             <div>
-              <h2>Argument mapper</h2>
+              <h2><a href="./arg-mapper/">Argument mapper</a></h2>
               <p>
                 A dialogue-first argument mapper: the graph is the output of reasoning, not the working surface.
               </p>
-              <p class="also">Runs locally — it needs a server. See arg-mapper/ in the repository.</p>
+              <p class="more">
+                <span>Saves to your browser · the AI guide needs <code>npm run dev</code> locally</span>
+              </p>
             </div>
           </li>
         </ul>

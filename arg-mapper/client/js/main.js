@@ -9,7 +9,17 @@ import {
   setAiMode,
   reset,
 } from "./dialogue.js";
-import { initSession, scheduleSave, newSession, listSessions, loadSession, analyzeDocument, streamDialogue } from "./session.js";
+import {
+  initSession,
+  scheduleSave,
+  newSession,
+  listSessions,
+  loadSession,
+  analyzeDocument,
+  streamDialogue,
+  hasServer,
+  storageLabel,
+} from "./session.js";
 
 const svgEl = document.getElementById("arg-graph");
 const messagesEl = document.getElementById("dialogue-messages");
@@ -346,6 +356,20 @@ document.getElementById("new-argument-btn").addEventListener("click", () => {
 
 // ── Session init — show home screen ──
 showHome();
+
+// The Guide needs a server to reach an LLM. Served statically there isn't one,
+// so say that on the control rather than letting it silently do nothing —
+// every dialogue step has a scripted prompt, so the app is whole without it.
+(async () => {
+  await initSession();
+  if (hasServer()) return;
+  aiToggle.checked = false;
+  aiToggle.disabled = true;
+  setAiMode(false);
+  const wrap = aiToggle.closest(".ai-toggle-wrap");
+  wrap.title = `AI Guide needs the local server (npm run dev). Scripted prompts are in use, and your work is saved to ${storageLabel()}.`;
+  wrap.classList.add("is-unavailable");
+})();
 
 async function handleSubmit() {
   const text = inputEl.value.trim();

@@ -1,5 +1,23 @@
+import { contentionFromText, createLocalStore } from './store/local-store.js';
+
+/**
+ * Sessions, over whichever backend is available.
+ *
+ * Served by the Express app, sessions go to SQLite and the AI Guide works.
+ * Opened as static files with no server behind them, sessions go to
+ * IndexedDB and the Guide falls back to its scripted prompts — which the
+ * dialogue state machine already provides for every step, so nothing about
+ * the reasoning flow depends on the network.
+ *
+ * The backend is decided once, at init, by probing /api/health.
+ */
+
 let sessionId = null;
 let saveTimer = null;
+let backend = null;
+let localStore = null;
+/** In-flight probe, so concurrent first callers share one request. */
+let detecting = null;
 
 function getOrCreateUserId() {
   let id = localStorage.getItem('userId');
@@ -16,20 +34,72 @@ function userHeaders(extra = {}) {
   return { 'X-User-Id': userId, ...extra };
 }
 
+/** True once we know a server is answering. Callers use it for UI copy. */
+export function hasServer() {
+  return backend === 'server';
+}
+
+export function storageLabel() {
+  if (backend === 'server') return 'server';
+  return localStore?.backend === 'localstorage' ? 'this browser (localStorage)' : 'this browser (IndexedDB)';
+}
+
+function detectBackend() {
+  if (backend) return Promise.resolve(backend);
+  detecting ??= probeBackend();
+  return detecting;
+}
+
+async function probeBackend() {
+  try {
+    // A short timeout matters for the static case: file:// and Pages both
+    // answer fast (a failed fetch or a 404), but a hung request would
+    // otherwise stall the first paint.
+    const ac = new AbortController();
+    const timer = setTimeout(() => ac.abort(), 1500);
+    const res = await fetch('./api/health', { headers: userHeaders(), signal: ac.signal });
+    clearTimeout(timer);
+    const body = res.ok ? await res.json().catch(() => null) : null;
+    backend = body?.ok ? 'server' : 'local';
+  } catch {
+    backend = 'local';
+  }
+  if (backend === 'local') localStore = await createLocalStore();
+  return backend;
+}
+
 export async function initSession() {
+  await detectBackend();
+
   const stored = localStorage.getItem('sessionId');
   if (stored) {
-    const res = await fetch(`/api/sessions/${stored}`, { headers: userHeaders() });
-    if (res.ok) {
+    const existing = await readSession(stored);
+    if (existing) {
       sessionId = Number(stored);
-      return await res.json();
+      return existing;
     }
   }
-  const res = await fetch('/api/sessions', { method: 'POST', headers: userHeaders() });
-  const { id } = await res.json();
-  sessionId = id;
-  localStorage.setItem('sessionId', id);
+
+  sessionId = await makeSession();
+  localStorage.setItem('sessionId', String(sessionId));
   return null;
+}
+
+async function readSession(id) {
+  if (backend === 'server') {
+    const res = await fetch(`./api/sessions/${id}`, { headers: userHeaders() });
+    return res.ok ? res.json() : null;
+  }
+  return localStore.get(id);
+}
+
+async function makeSession() {
+  if (backend === 'server') {
+    const res = await fetch('./api/sessions', { method: 'POST', headers: userHeaders() });
+    const { id } = await res.json();
+    return id;
+  }
+  return localStore.create(userId);
 }
 
 export function scheduleSave(nodes, messages) {
@@ -39,52 +109,59 @@ export function scheduleSave(nodes, messages) {
 
 async function save(nodes, messages) {
   if (!sessionId) return;
-  await fetch(`/api/sessions/${sessionId}`, {
-    method: 'PUT',
-    headers: userHeaders({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify({ nodes, messages }),
-  });
+  if (backend === 'server') {
+    await fetch(`./api/sessions/${sessionId}`, {
+      method: 'PUT',
+      headers: userHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ nodes, messages }),
+    });
+    return;
+  }
+  await localStore.update(sessionId, nodes, messages);
 }
 
-export function newSession() {
+export async function newSession() {
   localStorage.removeItem('sessionId');
   sessionId = null;
-  return fetch('/api/sessions', { method: 'POST', headers: userHeaders() })
-    .then(r => r.json())
-    .then(({ id }) => {
-      sessionId = id;
-      localStorage.setItem('sessionId', id);
-    });
+  await detectBackend();
+  sessionId = await makeSession();
+  localStorage.setItem('sessionId', String(sessionId));
 }
 
 export async function listSessions() {
-  const res = await fetch('/api/sessions', { headers: userHeaders() });
-  if (!res.ok) return [];
-  return res.json();
+  await detectBackend();
+  if (backend === 'server') {
+    const res = await fetch('./api/sessions', { headers: userHeaders() });
+    return res.ok ? res.json() : [];
+  }
+  return localStore.list(userId);
 }
 
 export async function loadSession(id) {
-  const res = await fetch(`/api/sessions/${id}`, { headers: userHeaders() });
-  if (!res.ok) return null;
+  const data = await readSession(id);
+  if (!data) return null;
   sessionId = Number(id);
-  localStorage.setItem('sessionId', id);
-  return res.json();
+  localStorage.setItem('sessionId', String(id));
+  return data;
 }
 
 /**
  * Stream an AI-phrased Socratic question from the server.
  * Calls onToken(delta) for each streamed text chunk.
- * Returns the full text, or null if AI is not configured (503) or an error occurs
- * (callers should fall back to the scripted prompt in that case).
+ * Returns the full text, or null when there is no server, the AI is not
+ * configured (503), or an error occurs — callers fall back to the scripted
+ * prompt in every one of those cases.
  *
  * @param {{ intent: string, nodes: Array, focusId: string|null, userInput: string, scriptedPrompt: string }} opts
  * @param {(delta: string) => void} onToken
  * @returns {Promise<string|null>}
  */
 export async function streamDialogue({ intent, nodes, focusId, userInput, scriptedPrompt }, onToken) {
+  if (backend !== 'server') return null;
+
   let res;
   try {
-    res = await fetch('/api/dialogue/stream', {
+    res = await fetch('./api/dialogue/stream', {
       method: 'POST',
       headers: userHeaders({ 'Content-Type': 'application/json' }),
       body: JSON.stringify({ intent, nodes, focusId, userInput, scriptedPrompt }),
@@ -131,14 +208,27 @@ export async function streamDialogue({ intent, nodes, focusId, userInput, script
 }
 
 export async function analyzeDocument(text) {
-  const res = await fetch('/api/analyze-document', {
-    method: 'POST',
-    headers: userHeaders({ 'Content-Type': 'application/json' }),
-    body: JSON.stringify({ text }),
-  });
-  if (!res.ok) throw new Error('Analysis failed');
-  const data = await res.json();
-  sessionId = data.id;
-  localStorage.setItem('sessionId', String(data.id));
-  return data;
+  await detectBackend();
+
+  if (backend === 'server') {
+    const res = await fetch('./api/analyze-document', {
+      method: 'POST',
+      headers: userHeaders({ 'Content-Type': 'application/json' }),
+      body: JSON.stringify({ text }),
+    });
+    if (!res.ok) throw new Error('Analysis failed');
+    const data = await res.json();
+    sessionId = data.id;
+    localStorage.setItem('sessionId', String(data.id));
+    return data;
+  }
+
+  if (typeof text !== 'string' || !text.trim()) throw new Error('Analysis failed');
+
+  const nodes = [{ id: 'n0', parentId: null, type: 'contention', text: contentionFromText(text) }];
+  const id = await localStore.create(userId);
+  await localStore.update(id, nodes, []);
+  sessionId = id;
+  localStorage.setItem('sessionId', String(id));
+  return { id, nodes };
 }
