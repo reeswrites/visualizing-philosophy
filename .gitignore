@@ -12,4 +12,7 @@ npm-debug.log*
 *.db
 test-results/
 playwright-report/
+
+# Agent instructions and config stay local.
 .claude/
+CLAUDE.md
