@@ -1299,6 +1299,11 @@ export default function BeliefMart() {
   const [saved, setSaved] = useState([]);
   const [storeMsg, setStoreMsg] = useState("");
   const [query, setQuery] = useState("");
+  /* Declared here with query, not down with the other derived values: an effect
+     below lists it as a dependency, and a dependency array is evaluated during
+     render. Declared later, that read hits the temporal dead zone and the whole
+     app fails to mount. */
+  const searching = query.trim().length > 0;
   const [undo, setUndo] = useState(null);
   const [nudge, setNudge] = useState(false);
   const [nudged, setNudged] = useState(false);
@@ -1439,7 +1444,6 @@ export default function BeliefMart() {
   const spec = useMemo(() => specificity(bag), [bag]);
   const lean = useMemo(() => leaning(bag, results), [bag, results]);
   const untouched = useMemo(() => untouchedAisles(bag), [bag]);
-  const searching = query.trim().length > 0;
 
   const saveBuild = () => {
     const entry = { id: `b${Date.now()}`, name: shownName, bag: [...bag], ts: Date.now() };
